@@ -1,0 +1,72 @@
+<div class="container" style="margin-top: 50px;">
+    <form [formGroup]="guardianFormGroup">
+        <div class="form-group">
+            <h2>Guardian Form</h2>
+        </div>
+        <div class="form-group">
+            <label>Father's Full Name</label>
+            <input type="text" class="form-control col-md-4" placeholder="Enter a full name" formControlName="fatherName">
+            <span class="text-danger" *ngIf="guardianFormGroup.controls.fatherName.invalid && guardianFormGroup.controls.fatherName.touched">This Field is Required</span>
+        </div>
+        <div class="form-group">
+            <label>Mother's Full Name</label>
+            <input type="text" class="form-control col-md-4" placeholder="Enter a full name" formControlName="motherName">
+            <span class="text-danger" *ngIf="guardianFormGroup.controls.motherName.invalid && guardianFormGroup.controls.motherName.touched">This Field is Required</span>
+        </div>
+        <div class="form-group">
+            <label>Father's Occupation</label>
+            <input type="text" class="form-control col-md-4" placeholder="Enter the occupation" formControlName="fatherOccupation">
+            <span class="text-danger" *ngIf="guardianFormGroup.controls.fatherOccupation.invalid && guardianFormGroup.controls.fatherOccupation.touched">This Field is Required</span>
+        </div>
+        <div class="form-group">
+            <label>Father's Salary</label>
+            <input type="number" class="form-control col-md-4" placeholder="Enter the salary" formControlName="fatherSalary">
+            <span class="text-danger" *ngIf="guardianFormGroup.controls.fatherSalary.invalid && guardianFormGroup.controls.fatherSalary.touched">This Field is Required</span>
+        </div>
+        <div class="form-group">
+            <label>Mother's Occupation</label>
+            <input type="text" class="form-control col-md-4" placeholder="Enter the occupation" formControlName="motherOccupation">
+            <span class="text-danger" *ngIf="guardianFormGroup.controls.motherOccupation.invalid && guardianFormGroup.controls.motherOccupation.touched">This Field is Required</span>
+        </div>
+        <div class="form-group">
+            <label>Mother's Salary</label>
+            <input type="number" class="form-control col-md-4" placeholder="Enter the salary" formControlName="motherSalary">
+            <span class="text-danger" *ngIf="guardianFormGroup.controls.motherSalary.invalid && guardianFormGroup.controls.motherSalary.touched">This Field is Required</span>
+        </div>
+        <div class="form-group">
+            <label>Sibling's</label>
+            <input type="text" class="form-control col-md-4" placeholder="Enter siblings name" formControlName="sibling">
+            <span class="text-danger" *ngIf="guardianFormGroup.controls.sibling.invalid && guardianFormGroup.controls.sibling.touched">This Field is Required</span>
+        </div>
+        <div class="form-group">
+            <label>EmailId</label>
+            <input type="text" class="form-control col-md-4" placeholder="Enter email id" formControlName="emailId">
+            <span class="text-danger" *ngIf="guardianFormGroup.controls.emailId.invalid && guardianFormGroup.controls.emailId.touched">This Field is Required</span>
+        </div>
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input type="text" class="form-control col-md-4" placeholder="Enter a phone number" formControlName="phoneNumber">  
+        </div>
+        <div class="form-group">
+            <label>Mobile Number</label>
+            <input type="text" class="form-control col-md-4" placeholder="Enter a mobile number" formControlName="mobileNumber">
+            <span class="text-danger" *ngIf="guardianFormGroup.controls.mobileNumber.invalid && guardianFormGroup.controls.mobileNumber.touched">This Field is Required</span>
+        </div>
+        <div class="form-group">
+            <label>Address</label>
+            <textarea class="form-control col-md-4" placeholder="Enter a address" formControlName="address"></textarea>
+            <span class="text-danger" *ngIf="guardianFormGroup.controls.address.invalid && guardianFormGroup.controls.address.touched">This Field is Required</span>
+        </div>
+        <div class="form-group">
+            <label>Pincode</label>
+            <input type="number" class="form-control col-md-4" placeholder="Enter a pincode" formControlName="pinCode">
+            <span class="text-danger" *ngIf="guardianFormGroup.controls.pinCode.invalid && guardianFormGroup.controls.pinCode.touched">This Field is Required</span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary" (click)="onSubmit()" [disabled]="!guardianFormGroup.valid">
+        </div>
+    </form>
+</div>
+
+
