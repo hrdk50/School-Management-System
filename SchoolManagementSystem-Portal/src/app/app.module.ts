@@ -7,6 +7,7 @@ import { FeesComponent } from './fees/fees.component';
 import { AdmissionComponent } from './admission/admission.component';
 import { GuardianComponent } from './guardian/guardian.component';
 import { OldStudentComponent } from './old-student/old-student.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { OldStudentComponent } from './old-student/old-student.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

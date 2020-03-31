@@ -10,13 +10,16 @@
         <p>You need to fill total amount of fee in four installment.</p>
     </div>
     <div class="form-group">
+        <input type="number" placeholder="Enter student name" formControlName="studentId" class="form-control col-md-4"> 
+    </div>
+    <div class="form-group">
        <b> <label>Installment</label> </b>
             <select class="form-control col-md-4" formControlName="installment" autofocus>
                 <option disabled="" selected="">Please select the installment</option>
-                <option value = "7000">First Installment : ‎₹‎7000</option>
-                <option value="5000">Second Installment : ‎₹‎5000</option>
-                <option value="5000">Third Installment : ‎₹‎5000</option>
-                <option value="3000">Fourth Installment : ‎₹‎3000</option>
+                <option value = 7000>First Installment : ‎₹‎7000</option>
+                <option value=5000>Second Installment : ‎₹‎5000</option>
+                <option value=5000>Third Installment : ‎₹‎5000</option>
+                <option value=3000>Fourth Installment : ‎₹‎3000</option>
             </select>
             <span class="text-danger" *ngIf="feesFormGroup.controls.installment.invalid && feesFormGroup.controls.installment.touched">This Field is Required</span><br>
             <!-- <h5 [ngStyle]="firstInstallment">7000</h5>
@@ -24,7 +27,7 @@
             <h5 [ngStyle]="fourthInstallment">3000</h5> -->
     </div>
     <div class="form-group">
-        <button class="btn btn-primary" (click)="onSubmit()">Submit</button> 
+        <button class="btn btn-primary" (click)="onSubmit()">Payment</button> 
     </div>
 </form>
 </div>

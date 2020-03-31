@@ -1,12 +1,12 @@
 <div class="container" style="margin-top: 50px;">
-    <form [formGroup]="addmissionFormGroup">
+    <form [formGroup]="admissionFormGroup">
         <div class="form-group">
             <h2>New Student's Admission Form</h2>
         </div>
         <div class="form-group">
             <label>Full Name</label>
             <input type="text" class="form-control col-md-4" placeholder="Enter your full name" formControlName="studentName" autofocus>
-            <span class="text-danger" *ngIf="addmissionFormGroup.controls.studentName.invalid && addmissionFormGroup.controls.studentName.touched">This Field is Required</span>
+            <span class="text-danger" *ngIf="admissionFormGroup.controls.studentName.invalid && admissionFormGroup.controls.studentName.touched">This Field is Required</span>
         </div>
         <div class="form-group">
             <label>Gender</label><br>
@@ -16,12 +16,12 @@
             <label for="female">Female</label>&nbsp;
             <input type="radio" id="other" formControlName="gender" value="other">
             <label for="other">Other</label>
-            <span class="text-danger" *ngIf="addmissionFormGroup.controls.gender.invalid && addmissionFormGroup.controls.gender.touched">This Field is Required</span>
+            <span class="text-danger" *ngIf="admissionFormGroup.controls.gender.invalid && admissionFormGroup.controls.gender.touched">This Field is Required</span>
         </div>
         <div class="form-group">
             <label>Birth Date</label>
             <input type="date" class="form-control col-md-4" placeholder="Enter your birth date" formControlName="birthDate">
-            <span class="text-danger" *ngIf="addmissionFormGroup.controls.birthDate.invalid && addmissionFormGroup.controls.birthDate.touched">This Field is Required</span>
+            <span class="text-danger" *ngIf="admissionFormGroup.controls.birthDate.invalid && admissionFormGroup.controls.birthDate.touched">This Field is Required</span>
         </div>
         <div class="form-group">
             <label>Blood Group</label>
@@ -36,17 +36,17 @@
                 <option>AB+</option>
                 <option>AB-</option>
             </select>
-            <span class="text-danger" *ngIf="addmissionFormGroup.controls.bloodGroup.invalid && addmissionFormGroup.controls.bloodGroup.touched">This Field is Required</span>
+            <span class="text-danger" *ngIf="admissionFormGroup.controls.bloodGroup.invalid && admissionFormGroup.controls.bloodGroup.touched">This Field is Required</span>
         </div>
         <div class="form-group">
             <label>Height</label>
             <input type="text" class="form-control col-md-4" placeholder="Enter your height" formControlName="height">
-            <span class="text-danger" *ngIf="addmissionFormGroup.controls.height.invalid && addmissionFormGroup.controls.height.touched">This Field is Required</span>
+            <span class="text-danger" *ngIf="admissionFormGroup.controls.height.invalid && admissionFormGroup.controls.height.touched">This Field is Required</span>
         </div>
         <div class="form-group">
             <label>Weight</label>
             <input type="number" class="form-control col-md-4" placeholder="Enter your weight" formControlName="weight">
-            <span class="text-danger" *ngIf="addmissionFormGroup.controls.weight.invalid && addmissionFormGroup.controls.weight.touched">This Field is Required</span>
+            <span class="text-danger" *ngIf="admissionFormGroup.controls.weight.invalid && admissionFormGroup.controls.weight.touched">This Field is Required</span>
         </div>
         <div class="form-group">
             <label>Standard</label>
@@ -56,10 +56,10 @@
                 <option>Junior KG</option>
                 <option>Senior KG</option>
             </select>
-            <span class="text-danger" *ngIf="addmissionFormGroup.controls.standard.invalid && addmissionFormGroup.controls.standard.touched">This Field is Required</span>
+            <span class="text-danger" *ngIf="admissionFormGroup.controls.standard.invalid && admissionFormGroup.controls.standard.touched">This Field is Required</span>
         </div>
         <div class="form-group">
-            <input type="submit" class="btn btn-primary" (click)="onSubmit()" [disabled]="!addmissionFormGroup.valid">
+            <input type="submit" class="btn btn-primary" (click)="onSubmit()" [disabled]="!admissionFormGroup.valid">
         </div>
         <div>
             Not a new student of this school?<a routerLink="/oldstudent">Old Student Form</a>
